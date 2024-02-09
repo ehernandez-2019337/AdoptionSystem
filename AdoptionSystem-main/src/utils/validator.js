@@ -37,3 +37,20 @@ export const encrypt = async(password)=>{
         return false
     }
  }
+
+ export const checkUpdateAnimals = (data, animalId)=>{
+    if(animalId){
+        if(Object.entries(data).length ===0 ||
+            data.typeOfAnimal ||
+            data.typeOfAnimal == ''||
+            data.keeper ||
+            data.keeper === ''
+            
+        ) {
+            return false 
+        }
+        return true
+    }else{
+        return false
+    }
+ }
